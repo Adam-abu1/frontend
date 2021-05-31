@@ -1,22 +1,19 @@
 {
   "name": "weather-app",
-  "description": "A Million Ads Frontend Tech Test",
   "version": "0.1.0",
   "private": true,
+  "description": "A Million Ads Frontend Tech Test",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "api": "json-server --watch db.json --port 3030"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AMA-engineering/frontend.git"
-  },
   "dependencies": {
     "core-js": "^3.6.5",
+    "json-server": "^0.16.2",
     "vue": "^2.6.11",
-    "json-server": "^0.16.2"
+    "vuetify": "^2.4.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -25,7 +22,11 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "sass": "^1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-vuetify": "~2.4.0",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.7.0"
   },
   "eslintConfig": {
     "root": true,
@@ -45,5 +46,9 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AMA-engineering/frontend.git"
+  }
 }
