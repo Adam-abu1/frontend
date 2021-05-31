@@ -18,8 +18,8 @@ export default {
         return apiClient.get('/weather')
             .then(({data}) => {
                 return data.find(weatherDatum => {
-                    return ((longitude.toFixed(2) === weatherDatum?.coord?.lon)
-                    && (latitude.toFixed(2) === weatherDatum?.coord?.lat))
+                    return ((Number(longitude.toFixed(2)) === weatherDatum?.coord?.lon)
+                    && (Number(latitude.toFixed(2)) === weatherDatum?.coord?.lat))
                 })
             })
     }
