@@ -30,8 +30,8 @@ import LocationService from '@/services/LocationService'
             foundLocation: {}
         }),
         methods: {
-            searchForPostcode() {
-                this.foundLocation = LocationService.getLocation(this.enteredPostcode)
+            async searchForPostcode() {
+                this.foundLocation = await LocationService.getLocation(this.enteredPostcode)
             }
         },
         mounted() {
