@@ -1,7 +1,7 @@
 <template>
     <v-card width="400" class="mx-auto mt-5">
         <v-card-title>
-            <h1 class="display-1">Weather App</h1>
+            <h1 class="display-1">Postcode Search</h1>
         </v-card-title>
         <v-form>
             <v-card-text>
@@ -22,6 +22,8 @@
 </template>
 <script>
 import LocationService from '@/services/LocationService'
+import {eventBus} from "../main";
+
     export default {
         name: 'PostcodeSearch',
         data: () => ({
@@ -32,6 +34,7 @@ import LocationService from '@/services/LocationService'
         methods: {
             async searchForPostcode() {
                 this.foundLocation = await LocationService.getLocation(this.enteredPostcode)
+                eventBus.$emit('foundLocationObject', this.foundLocation)
             }
         },
         mounted() {

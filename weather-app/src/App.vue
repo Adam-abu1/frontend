@@ -39,17 +39,20 @@
 
         <v-main>
             <PostcodeSearch />
+            <WeatherData />
         </v-main>
     </v-app>
 </template>
 
 <script>
     import PostcodeSearch from '@/components/PostcodeSearch';
+    import WeatherData from "./components/WeatherData";
 
     export default {
         name: 'App',
         components: {
-            PostcodeSearch
+            PostcodeSearch,
+            WeatherData
         },
         data: () => ({
             enteredPostcode: ''
